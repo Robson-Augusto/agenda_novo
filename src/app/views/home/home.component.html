@@ -1,3 +1,4 @@
+
 <link
 href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
 rel="stylesheet"
@@ -10,11 +11,17 @@ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52n
 crossorigin="anonymous"
 ></script>
 <mat-toolbar>
-<mat-toolbar-row style="font-size: 1.5rem; height: 80px; background-color: rgba(57, 131, 201, 0.452);">
-<span>🪘 Aprendiz de Umbanda 🪘 </span>
+<mat-toolbar-row style="font-size: 1.5rem; height: 80px; background-color: rgba(102, 104, 230, 0.452);">
+
+  <span>Umbanda-se</span>
+  <img style="margin-left: 30px ;" src="https://mir-s3-cdn-cf.behance.net/projects/404/0b2c44104940691.Y3JvcCwxMzQ2LDEwNTIsMCwxNTY.png"> 
+  <button class="btn btn-outline-primary" mat-button [matMenuTriggerFor]="menu" style="margin-left: auto;">Menu</button>
+  <mat-menu #menu="matMenu">
+    <a href="./orixas/orixas.component.ts"><button mat-menu-item>Orixás</button></a>
+    <button mat-menu-item>Pontos</button>
+  </mat-menu>
 </mat-toolbar-row>
 </mat-toolbar>
-
 
 <nav  id="navbar-example2" class="navbar bg-light px-3">
   <a class="navbar-brand" href="#">Apresentação:</a>
@@ -31,8 +38,6 @@ crossorigin="anonymous"
   <br>
 </div>
 
-
-
 <nav  id="navbar-example2" class="navbar bg-light px-3">
   <a class="navbar-brand" href="#">O que é a Umbanda:</a>
   <ul class="nav nav-pills">
@@ -41,7 +46,7 @@ crossorigin="anonymous"
 
 
 <mat-tab-group>
-  <mat-tab label="First">
+  <mat-tab label="Primeiro">
     <div class="card" style="padding-left: 25%;">
       <img class="card-img-top" >
         <div class="card-body">
@@ -50,7 +55,8 @@ crossorigin="anonymous"
   </div> 
 </mat-tab>
 
-<mat-tab label="Second">
+<mat-tab label="Segundo" >
+  
   <div class="card" style="width: 18rem;">
     <img src="https://static.todamateria.com.br/upload/um/ba/umbandalagoabb.jpg" class="card-img-top" alt="...">
     <div class="card-body">
@@ -59,22 +65,10 @@ crossorigin="anonymous"
       <a href="#" class="btn btn-primary">❤️ Curtir</a>
     </div>
   </div>
-
-  <div class="card" style="width: 18rem;">
-    <img src="https://static.todamateria.com.br/upload/um/ba/umbandalagoabb.jpg" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Os orixás</h5>
-      <p class="card-text"></p>
-      <a href="#" class="btn btn-primary">❤️ Curtir</a>
-    </div>
-  </div>
-
-
 </mat-tab>
-
-
 </mat-tab-group>
 
+<app-orixas></app-orixas>
 
 
 
